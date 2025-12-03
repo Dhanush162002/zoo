@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Zoo Park</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+            document.getElementById(id).classList.add("active");
+        }
+    </script>
+</head>
+
+<body onload="showSection('home')">
+
+<header>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('animals')">Animals</a>
+    <a onclick="showSection('tickets')">Tickets</a>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('contact')">Contact</a>
+</header>
+
+<!-- HOME -->
+<section id="home">
+    <h1>Welcome to National Zoo Park</h1>
+    <p>Explore Wildlife • Learn • Enjoy • Protect Nature</p>
+</section>
+
+<!-- ANIMALS -->
+<section id="animals">
+    <h1>🦓 Zoo Animals</h1>
+
+    <div class="menu-container">
+
+        <div class="card">
+            <img src="lion.jpeg">
+            <h3>Lion</h3>
+            <p>The king of the jungle.</p>
+        </div>
+
+        <div class="card">
+            <img src="elephant.jpeg">
+            <h3>Elephant</h3>
+            <p>The gentle giant.</p>
+        </div>
+
+        <div class="card">
+            <img src="zebra.jpeg">
+            <h3>Zebra</h3>
+            <p>Known for unique stripes.</p>
+        </div>
+
+        <div class="card">
+            <img src="giraffe.jpeg">
+            <h3>Giraffe</h3>
+            <p>The tallest land animal.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- TICKETS -->
+<section id="tickets">
+    <h1>🎟 Zoo Tickets</h1>
+
+    <form class="order-box">
+        <label>Ticket Type</label>
+        <select>
+            <option>Adult - ₹150</option>
+            <option>Child - ₹80</option>
+            <option>Senior Citizen - ₹100</option>
+        </select>
+
+        <label>Number of Tickets</label>
+        <input type="number" min="1" value="1">
+
+        <label>Your Name</label>
+        <input type="text" placeholder="Enter name">
+
+        <button>Book Ticket</button>
+    </form>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h1>About National Zoo Park</h1>
+    <p>
+        National Zoo Park is home to over 150 species of birds, mammals, and reptiles.
+        Our mission is to protect wildlife, educate visitors, and conserve nature.
+    </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h1>Contact Us</h1>
+    <p>📞 +91 98765 43210</p>
+    <p>📧 nationalzoo@gmail.com</p>
+    <p>📍 Bannerghatta Road, Bengaluru</p>
+</section>
+
+</body>
+</html>
